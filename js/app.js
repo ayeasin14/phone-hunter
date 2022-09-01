@@ -8,6 +8,8 @@ const loadPhones = async (searchText) => {
 const displayPhones = phones => {
     const phonesContainer = document.getElementById('phones-container');
     phonesContainer.innerText = '';
+    // display first 20 phones only.
+    phones = phones.slice(0, 20);
     phones.forEach(phone => {
         const phoneDiv = document.createElement('div');
         phoneDiv.classList.add('col');
